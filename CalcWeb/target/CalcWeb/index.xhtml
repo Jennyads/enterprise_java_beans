@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <meta charset="UTF-8" />
+    <title>Calculadora EJB + JSF</title>
+</h:head>
+<h:body>
+    <h1>Calculadora com EJB (Jakarta EE)</h1>
+
+    <h:form>
+        <h:panelGrid columns="2" cellpadding="6">
+            <h:outputLabel for="a" value="Número A:" />
+            <h:inputText id="a" value="#{calcJSF.numeroA}" required="true" />
+
+            <h:outputLabel for="b" value="Número B:" />
+            <h:inputText id="b" value="#{calcJSF.numeroB}" required="true" />
+        </h:panelGrid>
+
+        <h:commandButton value="Calcular" action="#{calcJSF.calcular}" />
+        <h:messages globalOnly="true" />
+
+        <h:panelGroup rendered="#{not empty calcJSF.erro}">
+            <br />
+            <h:outputText value="Erro: #{calcJSF.erro}" style="color:red" />
+        </h:panelGroup>
+
+        <h2>Resultados</h2>
+        <ul>
+            <li>Soma: #{calcJSF.resultadoSoma}</li>
+            <li>Subtração: #{calcJSF.resultadoSubtracao}</li>
+            <li>Multiplicação: #{calcJSF.resultadoMultiplicacao}</li>
+            <li>Divisão: #{calcJSF.resultadoDivisao}</li>
+        </ul>
+    </h:form>
+</h:body>
+</html>

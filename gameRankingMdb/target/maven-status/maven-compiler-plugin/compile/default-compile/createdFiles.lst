@@ -1,0 +1,5 @@
+com\jeniffer\gamerankingMdb\ejb\JogoSomaBean.class
+com\jeniffer\gamerankingMdb\mdb\RankingLoggerMDB.class
+com\jeniffer\gamerankingMdb\jsf\JogoController.class
+com\jeniffer\gamerankingMdb\model\Jogador.class
+com\jeniffer\gamerankingMdb\ejb\RankingBean.class
